@@ -1,4 +1,4 @@
-package stock_price_notifier;
+package stock_price_alert_system;
 
 public class Application {
     public static void main(String[] args) throws InterruptedException {
