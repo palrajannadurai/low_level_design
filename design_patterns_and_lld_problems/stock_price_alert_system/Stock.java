@@ -6,7 +6,7 @@ import java.util.List;
 public class Stock implements Subject {
 
     List<Observer> observers = new ArrayList<>();
-    private String ticker;
+    private final String ticker;
     private double price;
 
     public Stock(String ticker) {

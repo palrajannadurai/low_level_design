@@ -1,6 +1,6 @@
 package observer;
 
-public class TVDisplay implements Observer{
+public class TVDisplay implements Observer {
 
     private String data = null;
 
