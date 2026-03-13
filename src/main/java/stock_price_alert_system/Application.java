@@ -12,7 +12,7 @@ public class Application {
 
         for (int i = 90; i <= 105; i++) {
             apple.setPrice(i);
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         }
     }
 }
