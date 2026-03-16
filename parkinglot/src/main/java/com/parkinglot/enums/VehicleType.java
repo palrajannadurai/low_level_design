@@ -15,7 +15,8 @@ package com.parkinglot.enums;
 public enum VehicleType {
     MOTOR_CYCLE("Motor Cycle", 1.0),
     CAR("Car", 1.5),
-    BUS("Bus", 3.0);
+    BUS("Bus", 3.0),
+    ELECTRIC_CAR("Electric Car", 2.0);
 
     private final String displayName;
     private final double sizeFactor;
