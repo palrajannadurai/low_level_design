@@ -1,5 +1,10 @@
 package com.vending_machine;
 
+import com.vending_machine.model.Denomination;
+import com.vending_machine.model.Product;
+import com.vending_machine.model.Transaction;
+import com.vending_machine.service.VendingMachine;
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         VendingMachine vm = VendingMachine.getInstance();

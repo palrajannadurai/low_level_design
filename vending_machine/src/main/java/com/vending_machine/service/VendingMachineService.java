@@ -1,4 +1,7 @@
-package com.vending_machine;
+package com.vending_machine.service;
+
+import com.vending_machine.model.Product;
+import com.vending_machine.model.Transaction;
 
 public interface VendingMachineService {
     Transaction startTransaction();

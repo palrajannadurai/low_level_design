@@ -1,4 +1,15 @@
-package com.vending_machine;
+package com.vending_machine.service;
+
+import com.vending_machine.inventory.Inventory;
+import com.vending_machine.model.Denomination;
+import com.vending_machine.model.Product;
+import com.vending_machine.model.Transaction;
+import com.vending_machine.payment.ChangeStrategy;
+import com.vending_machine.payment.GreedyChangeStrategy;
+import com.vending_machine.vending_state.DispenseState;
+import com.vending_machine.vending_state.IdleState;
+import com.vending_machine.vending_state.OutOfStockState;
+import com.vending_machine.vending_state.VendingState;
 
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
@@ -66,7 +77,7 @@ public class VendingMachine implements VendingMachineService, AdminService {
     }
 
     // ==================== Internal core logic (under globalLock) ====================
-    void dispenseProduct(Transaction tx) {
+    public void dispenseProduct(Transaction tx) {
         // already locked
         Product product = tx.getSelectedProduct();
         if (product == null) {
@@ -120,13 +131,13 @@ public class VendingMachine implements VendingMachineService, AdminService {
         state = new IdleState();
     }
 
-    void refundTransaction(Transaction tx) {
+    public void refundTransaction(Transaction tx) {
         int refund = tx.getInsertedMoney();
         tx.clearMoney();
         System.out.printf("[Tx %s] Refund $%d%n", tx.getTransactionId(), refund);
     }
 
-    void setState(VendingState newState) {
+    public void setState(VendingState newState) {
         this.state = newState;
     }
 

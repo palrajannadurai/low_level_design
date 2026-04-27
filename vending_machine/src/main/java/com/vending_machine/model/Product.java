@@ -1,4 +1,4 @@
-package com.vending_machine;
+package com.vending_machine.model;
 
 import java.util.Objects;
 

@@ -1,4 +1,8 @@
-package com.vending_machine;
+package com.vending_machine.vending_state;
+
+import com.vending_machine.service.VendingMachine;
+import com.vending_machine.model.Product;
+import com.vending_machine.model.Transaction;
 
 public class IdleState implements VendingState {
     @Override

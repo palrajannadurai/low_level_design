@@ -1,4 +1,4 @@
-package com.vending_machine;
+package com.vending_machine.inventory;
 
 import java.util.HashMap;
 import java.util.Map;

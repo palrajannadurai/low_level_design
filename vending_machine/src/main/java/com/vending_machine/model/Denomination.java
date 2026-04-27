@@ -1,4 +1,4 @@
-package com.vending_machine;
+package com.vending_machine.model;
 
 public enum Denomination {
     COIN_1(1), COIN_2(2), COIN_5(5), COIN_10(10),
