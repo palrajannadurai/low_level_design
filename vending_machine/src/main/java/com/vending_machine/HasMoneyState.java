@@ -1,6 +1,6 @@
 package com.vending_machine;
 
-public class HasMoneyState implements VendingState{
+public class HasMoneyState implements VendingState {
     @Override
     public void insertMoney(VendingMachine machine, Transaction tx, int amount) {
         tx.addMoney(amount);
